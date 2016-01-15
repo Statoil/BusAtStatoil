@@ -1,0 +1,45 @@
+﻿<div data-role="page" id="buslocation" data-theme="a" >    <div data-role="header" style="text-align: center;">
+        <a href="/" data-role="button" data-icon="back" data-inline="true" data-mini="true">Back</a>
+        <img src="~/Images/bus_276x71.png" />
+    </div>
+    <div data-role="content" >        
+        The <b>@ViewBag.Message</b> have the following Statoil services:
+
+        <div data-content-theme="a" >
+            <h3>Office shuttle</h3>
+                <p>
+@Html.Raw(@ViewBag.OfficeInfo)
+                </p>
+<div data-role="collapsible" data-mini="true" data-content-theme="d" >
+            <h4>More info</h4>
+            <p>
+@Html.Raw(@ViewBag.OfficeMore)
+            </p>
+</div>
+        </div>        <div data-conxtent-theme="a">
+            <h3>Hotel shuttle</h3>
+                <p>
+@Html.Raw(@ViewBag.HotelInfo)
+                </p>
+<div data-role="collapsible" data-mini="true" data-content-theme="d" >
+            <h5>More info</h5>
+                <p>
+@Html.Raw(@ViewBag.HotelMore)
+                </p>
+</div>
+        </div>
+        <div data-content-theme="a">
+            <h3>Airport shuttle</h3>
+                <p>
+@Html.Raw(@ViewBag.AirportInfo)
+                </p>
+
+
+<div data-role="collapsible" data-mini="true" data-content-theme="d" >
+            <h5>More info</h5>
+                <p>
+@Html.Raw(@ViewBag.AirportMore)
+                </p>
+        </div>
+    </div></div>
+</div>

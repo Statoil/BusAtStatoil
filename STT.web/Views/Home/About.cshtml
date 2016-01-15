@@ -1,0 +1,15 @@
+﻿<div data-role="page" id="about" data-theme="a" >    <div data-role="header" style="text-align: center;">
+        <a href="/" data-role="button" data-icon="back" data-inline="true" data-mini="true">Back</a>
+        <img src="~/Images/bus_276x71.png" />
+    </div>    <div data-role="content" >
+        <div data-role="field contain">                <div class="ui-block-a" data-content-theme="a"> 
+                <h3>Responsible for updates:</h3>                    
+                    @Html.Raw(@ViewBag.AboutUpdates)
+                </div>
+                <div class="ui-block-a" data-content-theme="a"> 
+                <h3>Responsible for the app:</h3>
+                    @Html.Raw(@ViewBag.AboutResponsible)
+                </div>
+        </div>
+    </div>
+</div>

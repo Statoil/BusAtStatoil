@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Shuttle";
+}
+
+<div data-role="page" id="shuttle" data-theme="a" >        <div data-role="navbar" >            <ul>                <li>@Html.ActionLink("Office locations", "Offices", "Home")</li>                <li>@Html.ActionLink("Office shuttle", "Shuttle", "Home", new {}, new {@class = "ui-btn-active"})</li>                <li>@Html.ActionLink("About", "About", "Home")</li>            </ul>        </div>
+
+<div data-role="content" >
+        <div data-role="field contain">                              <fieldset class="ui-grid-a">
+                <legend>Location:</legend>
+                <div class="ui-block-a">                     <select  id="ShuttleCity" name="ShuttleCity"></select>                    <select id="ShuttleService" name="ShuttleService">
+                        <option value="Office">Office shuttle bus</option>
+                        <option value="Hotel">Hotell shuttle bus</option>
+                        <option value="Airport">Airport bus</option>
+                        <option value="Train">Train</option>
+                        <option value="Taxi">Taxi</option>
+                    </select>                </div>
+                <div class="ui-block-b">                      <article id="TransportInfo"> </article>
+                </div>
+            </fieldset>             
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</div>

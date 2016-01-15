@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Maintenance";
+}
+<div data-role="page" id="maintenance" data-theme="a" >
+    <div data-role="header" style="text-align: center;">
+        <a href="/Maintenanz/Index" data-role="button" data-icon="home" data-inline="true" data-mini="true">Home</a>
+        <img src="~/Images/bus_276x154version2.png" />
+        <a href="javascript:document.getElementById('logoutForm').submit()" data-role="button" data-icon="back" data-inline="true" data-mini="true">Logout</a>
+        @using (Html.BeginForm("LogOff", "Maintenanz", FormMethod.Post, new { id = "logoutForm" })) {@Html.AntiForgeryToken()}
+        <h1>Maintenance (@User.Identity.Name)</h1>
+    </div>    <div data-role="content" >
+        The URL to this page is intentionally made obfuscated.
+        <hr />
+        <ul data-role="listview" data-inset="true">
+            <li><a href="/Maintenanz/Services" data-mini="true" data-theme="a">Services</a></li>
+            <li><a href="/Maintenanz/News" data-theme="a">News and about</a></li>
+            </ul>
+    </div>
+</div>

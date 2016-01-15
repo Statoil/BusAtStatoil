@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>bus@Statoil</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="statoiltransportapp.min.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="news" data-theme="a">
+        <div data-role="header" style="text-align: center;">
+            <a href="index.html" id="HomeLink" data-role="button" data-mini="true" data-icon="home" data-iconpos="notext" >Home</a>
+            <img src="images/bus_276x71.png" />
+        </div>
+    <div data-role="content" >
+            <h4>News</h4>
+        <div id="Storage"></div><br />
+        <div id="NewsInfo"></div>
+    </div>
+
+    <script>
+        $(window).bind('orientationchange', orientationHandler);
+
+        function orientationHandler() {
+            window.setTimeout(function () {
+                checkWidth();
+            }, 200);
+        }
+
+        function checkWidth() {
+            //alert($.event.special.orientationchange.orientation() + " " + $(window).width());
+            if ($(window).width() < 350) {
+                $('#HomeLink').data("iconpos", "notext");
+            } else {
+                $('#HomeLink').data("iconpos", "left");
+            }
+        }
+
+        checkWidth();
+
+        var serviceUrl = "http://statoiltransport.cloudapp.net/Home/GetArticle?kind=news";
+        var online = navigator.onLine || false;
+
+        if (online) {
+            $.getJSON(serviceUrl, function (data) {
+                $.each(data, function (val, text) {
+                    document.querySelector('#NewsInfo').innerHTML = text['Information'];
+                    window.localStorage.setItem("NewsInfo", text['Information']);
+                })
+            });            
+        } else {
+            document.querySelector('#NewsInfo').innerHTML = window.localStorage.getItem("NewsInfo") || "... no data cached ...";
+            document.querySelector('#Storage').innerHTML = "<b>Offline data</b>";
+        }
+
+    </script>
+    </div>
+</body>
+</html>

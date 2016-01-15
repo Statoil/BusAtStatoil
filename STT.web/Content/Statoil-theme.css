@@ -1,0 +1,180 @@
+﻿/* Prepared for Statoil by Terje Tessem (TETESS) 2013-01-10*/
+.ui-bar-s{
+	border:1px solid #2a2a2a;
+	background:#111;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:0 -1px 1px #000;
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#111));
+	background-image:-webkit-linear-gradient(#3c3c3c,#111);
+	background-image:-moz-linear-gradient(#3c3c3c,#111);
+	background-image:-ms-linear-gradient(#3c3c3c,#111);
+	background-image:-o-linear-gradient(#3c3c3c,#111);
+	background-image:linear-gradient(#3c3c3c,#111)
+}
+.ui-bar-s,.ui-bar-s input,.ui-bar-s select,.ui-bar-s textarea,.ui-bar-s button{
+	font-family:Helvetica,Arial,sans-serif
+}
+.ui-bar-s .ui-link-inherit{
+	color:#fff
+}
+.ui-bar-s .ui-link{
+	color:#7cc4e7;
+	font-weight:bold
+}
+.ui-bar-s .ui-link:hover{
+	color:#2489ce
+}
+.ui-bar-s .ui-link:active{
+	color:#2489ce
+}
+.ui-bar-s .ui-link:visited{
+	color:#2489ce
+}
+.ui-body-s,.ui-dialog.ui-overlay-s{
+	border:1px solid #2a2a2a;
+	background:#222;
+	color:#fff;
+	text-shadow:0 1px 0 #000;
+	font-weight:normal;
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#666),to(#222));
+	background-image:-webkit-linear-gradient(#666,#222);
+	background-image:-moz-linear-gradient(#666,#222);
+	background-image:-ms-linear-gradient(#666,#222);
+	background-image:-o-linear-gradient(#666,#222);
+	background-image:linear-gradient(#666,#222)
+}
+.ui-body-s,.ui-body-s input,.ui-body-s select,.ui-body-s textarea,.ui-body-s button{
+	font-family:Helvetica,Arial,sans-serif
+}
+.ui-body-s .ui-link-inherit{
+	color:#fff
+}
+.ui-body-s .ui-link{
+	color:#2489ce;
+	font-weight:bold
+}
+.ui-body-s .ui-link:hover{
+	color:#2489ce
+}
+.ui-body-s .ui-link:active{
+	color:#2489ce
+}
+.ui-body-s .ui-link:visited{
+	color:#2489ce
+}
+.ui-btn-up-s{
+	border:1px solid #222;
+	background:#333;
+	font-weight:bold;
+	color:#fff;
+	text-shadow:0 -1px 1px #000;
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#555),to(#333));
+	background-image:-webkit-linear-gradient(#555,#333);
+	background-image:-moz-linear-gradient(#555,#333);
+	background-image:-ms-linear-gradient(#555,#333);
+	background-image:-o-linear-gradient(#555,#333);
+	background-image:linear-gradient(#555,#333)
+}
+.ui-btn-up-s a.ui-link-inherit{
+	color:#fff
+}
+.ui-btn-hover-s{
+	border:1px solid #000;
+	background:#444;
+	font-weight:bold;
+	color:#fff;
+	text-shadow:0 -1px 1px #000;
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#666),to(#444));
+	background-image:-webkit-linear-gradient(#666,#444);
+	background-image:-moz-linear-gradient(#666,#444);
+	background-image:-ms-linear-gradient(#666,#444);
+	background-image:-o-linear-gradient(#666,#444);
+	background-image:linear-gradient(#666,#444)
+}
+.ui-btn-hover-s a.ui-link-inherit{
+	color:#fff
+}
+.ui-btn-down-s{
+	border:1px solid #000;
+	background:#3d3d3d;
+	font-weight:bold;
+	color:#fff;
+	text-shadow:0 -1px 1px #000;
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#333),to(#5a5a5a));
+	background-image:-webkit-linear-gradient(#333,#5a5a5a);
+	background-image:-moz-linear-gradient(#333,#5a5a5a);
+	background-image:-ms-linear-gradient(#333,#5a5a5a);
+	background-image:-o-linear-gradient(#333,#5a5a5a);
+	background-image:linear-gradient(#333,#5a5a5a)
+}
+.ui-btn-down-s a.ui-link-inherit{
+	color:#fff
+}
+.ui-btn-up-s,.ui-btn-hover-s,.ui-btn-down-s{
+	font-family:Helvetica,Arial,sans-serif;
+	text-decoration:none
+}
+.ui-bar-s .ui-shadow{
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,.3);
+	-webkit-box-shadow:0 1px 0 rgba(255,255,255,.3);
+	box-shadow:0 1px 0 rgba(255,255,255,.3)
+}
+
+.ui-grid-s{
+	overflow:hidden
+}
+.ui-block-s{
+	margin:0;
+	padding:0;
+	border:0;
+	float:left;
+	min-height:1px
+}
+.ui-grid-solo .ui-block-s{
+	width:100%;
+	float:none
+}
+
+
+/*IS THE BELOW NEEDED ?*/
+.ui-grid-s .ui-block-s,.ui-grid-s .ui-block-b{
+	width:50%
+}
+.ui-grid-s .ui-block-s{
+	clear:left
+}
+.ui-grid-b .ui-block-s,.ui-grid-b .ui-block-b,.ui-grid-b .ui-block-c{
+	width:33.333%
+}
+.ui-grid-b .ui-block-s{
+	clear:left
+}
+.ui-grid-c .ui-block-s,.ui-grid-c .ui-block-b,.ui-grid-c .ui-block-c,.ui-grid-c .ui-block-d{
+	width:25%
+}
+.ui-grid-c .ui-block-s{
+	clear:left
+}
+.ui-grid-d .ui-block-s,.ui-grid-d .ui-block-b,.ui-grid-d .ui-block-c,.ui-grid-d .ui-block-d,.ui-grid-d .ui-block-e{
+	width:20%
+}
+.ui-grid-d .ui-block-s{
+	clear:left
+}
+div.ui-slider-switch div.ui-slider-labelbg-s{
+	width:60%;
+	height:100%;
+	left:0
+}
+.ui-slider-switch-s div.ui-slider-labelbg-s,.ui-slider-switch-b div.ui-slider-labelbg-b{
+	z-index:-1
+}
+.ui-slider-switch-s div.ui-slider-labelbg-b,.ui-slider-switch-b div.ui-slider-labelbg-s{
+	z-index:0
+}
+
+span.ui-slider-label-s{
+	left:-100%;
+	margin-right:-1px
+}

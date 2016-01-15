@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>bus@Statoil</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="statoiltransportapp.min.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="phonegap.js"></script>
+</head>
+<body>
+    <div data-role="page" id="busAtStatoil" data-theme="a">
+        <div data-role="header" style="text-align: center;">
+            <img style="vertical-align: top;" src="images/bus_276x154version2.png" alt="bus@Statoil" />
+        </div>
+        <div data-role="content" style="text-align: center;">
+        <hr />
+            <ul data-role="listview" data-inset="true">
+                <li><a onclick="window.localStorage.setItem('navlocation','Stavanger');" href="buslocation.html?location=Stavanger" data-theme="a">Stavanger area</a></li>
+                <li><a onclick="window.localStorage.setItem('navlocation','Trondheim');" href="buslocation.html?location=Trondheim" data-theme="a">Trondheim area</a></li>
+                <li><a onclick="window.localStorage.setItem('navlocation','Bergen');" href="buslocation.html?location=Bergen" data-theme="a">Bergen area</a></li>
+                <li><a onclick="window.localStorage.setItem('navlocation','Oslo');"  href="buslocation.html?location=Oslo" data-theme="a">Oslo area</a></li>
+                <li><a onclick="window.localStorage.setItem('navlocation','HarstadEvenes');" href="buslocation.html?location=HarstadEvenes" data-theme="a">Harstad/Evenes area</a></li>
+                <li><a href="about.html" data-theme="a">About</a></li>
+                <li><a href="news.html" data-theme="a">News</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+

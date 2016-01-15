@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.web", "STT.web\STT.web.csproj", "{8381C83B-433A-4195-B4BB-65BF46FD7C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.core", "STT.core\STT.core.csproj", "{86CA46F1-99E4-47A2-A4B5-1E2B0079F94B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.data", "STT.data\STT.data.csproj", "{C09DC6AB-64BC-404D-8C48-4D94936639DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.service", "STT.service\STT.service.csproj", "{8173C1F6-47F9-4C9F-87CB-EE97497114BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.worker", "STT.worker\STT.worker.csproj", "{EEE6BFB9-55D7-4D53-BACD-E61F9E74863B}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "STT.cloud", "STT.web.Azure\STT.cloud.ccproj", "{AB0C22A6-40E6-4F61-A6BD-4AE4E02B4177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8381C83B-433A-4195-B4BB-65BF46FD7C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8381C83B-433A-4195-B4BB-65BF46FD7C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8381C83B-433A-4195-B4BB-65BF46FD7C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8381C83B-433A-4195-B4BB-65BF46FD7C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CA46F1-99E4-47A2-A4B5-1E2B0079F94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CA46F1-99E4-47A2-A4B5-1E2B0079F94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CA46F1-99E4-47A2-A4B5-1E2B0079F94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CA46F1-99E4-47A2-A4B5-1E2B0079F94B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09DC6AB-64BC-404D-8C48-4D94936639DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09DC6AB-64BC-404D-8C48-4D94936639DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09DC6AB-64BC-404D-8C48-4D94936639DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09DC6AB-64BC-404D-8C48-4D94936639DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8173C1F6-47F9-4C9F-87CB-EE97497114BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8173C1F6-47F9-4C9F-87CB-EE97497114BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8173C1F6-47F9-4C9F-87CB-EE97497114BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8173C1F6-47F9-4C9F-87CB-EE97497114BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE6BFB9-55D7-4D53-BACD-E61F9E74863B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE6BFB9-55D7-4D53-BACD-E61F9E74863B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE6BFB9-55D7-4D53-BACD-E61F9E74863B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE6BFB9-55D7-4D53-BACD-E61F9E74863B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0C22A6-40E6-4F61-A6BD-4AE4E02B4177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0C22A6-40E6-4F61-A6BD-4AE4E02B4177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0C22A6-40E6-4F61-A6BD-4AE4E02B4177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0C22A6-40E6-4F61-A6BD-4AE4E02B4177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.statoil.net:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = STT.core\\STT.core.csproj
+		SccProjectName1 = STT.core
+		SccLocalPath1 = STT.core
+		SccProjectUniqueName2 = STT.data\\STT.data.csproj
+		SccProjectName2 = STT.data
+		SccLocalPath2 = STT.data
+		SccProjectUniqueName3 = STT.service\\STT.service.csproj
+		SccProjectName3 = STT.service
+		SccLocalPath3 = STT.service
+		SccProjectUniqueName4 = STT.web.Azure\\STT.cloud.ccproj
+		SccProjectName4 = STT.web.Azure
+		SccLocalPath4 = STT.web.Azure
+		SccProjectUniqueName5 = STT.web\\STT.web.csproj
+		SccProjectName5 = STT.web
+		SccLocalPath5 = STT.web
+		SccProjectUniqueName6 = STT.worker\\STT.worker.csproj
+		SccProjectName6 = STT.worker
+		SccLocalPath6 = STT.worker
+	EndGlobalSection
+EndGlobal

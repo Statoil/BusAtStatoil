@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Office Locations";
+}
+
+<div data-role="page" id="offices" data-theme="a" >        <div data-role="navbar" >            <ul>                <li>@Html.ActionLink("Office locations", "Offices", "Home", new {}, new {@class = "ui-btn-active"})</li>                <li>@Html.ActionLink("Office shuttle", "Shuttle", "Home")</li>                <li>@Html.ActionLink("About", "About", "Home")</li>            </ul>        </div>
+
+<div data-role="content" >
+        <div data-role="field contain">                              <!--fieldset class="ui-grid-a">
+                <legend>Location:</legend-->
+                <div class="xxxui-block-a">                     <select id="City" name="City"></select>                    <select id="Office" name="Office"></select>
+                </div>
+                <div class="xxxui-block-b" data-content-theme="b"  id="mapcollapse" data-role="collapsible" data-collapsed="true">                        Your approximate location <span id="geolocationstatus">currently unknown...</span>:
+                        <br />
+                        <span id="geolocationplace">Location not found</span>                        <h4 id="sak" data-theme="d">Map</h4>
+                        <div id="mapcanvas"> </div>
+                </div>
+            <!-- /fieldset-->
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</div>

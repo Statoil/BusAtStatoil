@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>bus@Statoil</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="statoiltransportapp.min.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="phonegap.js"></script>
+</head>
+<body>
+    <div data-role="page" id="about" data-theme="a">
+        <div data-role="header" style="text-align: center;">
+            <a href="index.html" data-role="button" data-icon="home" data-inline="true" data-mini="true">Home</a>
+            <img src="images/bus_276x71.png" />
+        </div>
+
+    <div data-role="content" >
+        <div id="Storage"></div>
+        <div data-role="field contain">                <div class="ui-block-a" data-content-theme="a"> 
+                <h3>Responsible for updates:</h3>                    
+                    <div id="AboutUpdates"></div>
+                </div>
+                <div class="ui-block-a" data-content-theme="a"> 
+                <h3>Responsible for the app:</h3>
+                    <div id="AboutResponsible"></div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        var serviceUrl = "http://statoiltransport.cloudapp.net/Home/GetArticle?kind=";
+        var online = navigator.onLine || false;
+
+        if (online) {
+            $.getJSON(serviceUrl + 'AboutUpdates', function (data) {
+                $.each(data, function (val, text) {
+                    document.querySelector('#AboutUpdates').innerHTML = text['Information'];
+                    window.localStorage.setItem("AboutUpdates", text['Information']);
+                })
+            });
+            $.getJSON(serviceUrl + 'AboutResponsible', function (data) {
+                $.each(data, function (val, text) {
+                    document.querySelector('#AboutResponsible').innerHTML = text['Information'];
+                    window.localStorage.setItem("AboutResponsible", text['Information']);
+                })
+            });
+        } else {
+            document.querySelector('#AboutUpdates').innerHTML = window.localStorage.getItem("AboutUpdates") || "... no data cached ...";
+            document.querySelector('#AboutResponsible').innerHTML = window.localStorage.getItem("AboutResponsible") || "... no data cached ...";
+            document.querySelector('#Storage').innerHTML = "<b>Offline data</b>";
+        }
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        //onDeviceReady();
+
+        /*function onDeviceReady() {
+            var networkState = navigator.network.connection;
+            alert(networkState);
+
+            var states = {};
+            states[Connection.UNKNOWN] = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI] = 'WiFi connection';
+            states[Connection.CELL_2G] = 'Cell 2G connection';
+            states[Connection.CELL_3G] = 'Cell 3G connection';
+            states[Connection.CELL_4G] = 'Cell 4G connection';
+            states[Connection.NONE] = 'No network connection';
+       
+            if(networkState == 0)
+                alert('Connection type: ' + networkState);
+            else
+                alert('Connection type: ' + states[networkState]);
+        }
+        */
+
+
+
+
+        function onDeviceReady() {
+            navigator.network.isReachable("google.com", reachableCallback, {});
+        }
+        // Check network status
+        function reachableCallback(reachability) {
+            // There is no consistency on the format of reachability
+            var networkState = reachability.code || reachability;
+            var states = {};
+            states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+            states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+            states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+            if (networkState != 0) online = true;
+        }
+
+        var online = navigator.onLine || false;
+        $(document).ready(function() { 
+            $(document).bind('deviceready', function(){
+                onDeviceReady()
+            })
+            // Your main code
+        })
+
+        /*if(online) {
+            alert("online");
+        } else {
+            // load from localStorage
+            alert("localstorage");
+        }*/
+
+        /*var networkState = navigator.network.connection.type;
+        var netstates = {};
+        netstates[Connection.UNKNOWN] = 'Unknown connection';
+        netstates[Connection.ETHERNET] = 'Ethernet connection';
+        netstates[Connection.WIFI] = 'WiFi connection';
+        netstates[Connection.CELL_2G] = 'Cell 2G connection';
+        netstates[Connection.CELL_3G] = 'Cell 3G connection';
+        netstates[Connection.CELL_4G] = 'Cell 4G connection';
+        netstates[Connection.NONE] = 'No network connection';
+        alert(networkState);
+        alert(netstates[networkState]);*/
+    </script>
+</div>
+</body>
+</html>

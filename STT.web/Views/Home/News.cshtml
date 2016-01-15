@@ -1,0 +1,10 @@
+﻿<div data-role="page" id="news" data-theme="a" >    <div data-role="header" style="text-align: center;">
+        <a href="/" data-role="button" data-icon="back" data-inline="true" data-mini="true">Back</a>
+        <img src="~/Images/bus_276x71.png" />
+    </div>    <div data-role="content" >
+            <h4>News</h4>
+            <p>
+@Html.Raw(@ViewBag.News)
+            </p>
+    </div>
+</div>

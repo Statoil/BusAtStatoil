@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div data-role="page" id="offices" data-theme="a" >        <div data-role="navbar" >            <ul>                <li>@Html.ActionLink("Office locations", "Offices", "Home")</li>                <li>@Html.ActionLink("Office shuttle", "Shuttle", "Home")</li>                <li>@Html.ActionLink("About", "About", "Home")</li>            </ul>        </div>
+
+<div data-role="content" style="text-align: center;">
+
+    <img src="~/Images/statoil_transparent_dark.png" alt="Statoil" /><br />
+    Welcome to the Statoil Transport App <br />
+    Find Statoil offices and transport to and from them.
+    </div>
+    @Html.Partial("_Footer")
+</div>

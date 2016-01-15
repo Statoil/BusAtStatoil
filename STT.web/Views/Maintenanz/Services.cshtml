@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Maintenance";
+}
+<div data-role="page" id="maintainservice" data-theme="a" >
+    <div data-role="header" style="text-align: center;">
+        <a href="/Maintenanz/Index" data-role="button" data-icon="home" data-inline="true" data-mini="true">Home</a>
+        <img src="~/Images/bus_276x71.png" />
+        <a href="javascript:document.getElementById('logoutForm').submit()" data-role="button" data-icon="back" data-inline="true" data-mini="true">Logout</a>
+        @using (Html.BeginForm("LogOff", "Maintenanz", FormMethod.Post, new { id = "logoutForm" })) {@Html.AntiForgeryToken()}
+        <h1>Services</h1>
+    </div>    <div data-role="content" >
+        <b>@ViewBag.Message</b><br />
+        <form action="/Maintenanz/UpdateServices" method="post" >
+            <label for="city" class="select">Location:</label>
+            <select name="city" id="city">
+            <option value="Stavanger">Stavanger</option>
+            <option value="Bergen">Bergen</option>
+            <option value="Oslo">Oslo</option>
+            <option value="Trondheim">Trondheim</option>
+            <option value="HarstadEvenes">Harstad Evenes</option>
+            </select>
+            <label for="kind" class="select">Service:</label>
+            <select name="kind" id="kind">
+            <option value="Office">Office</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Airport">Airport</option>
+            </select>   
+            	
+            <label for="info">Information:</label>
+            <textarea name="info" id="info"></textarea>
+
+            <label for="moreinfo">More information:</label>
+            <textarea name="moreinfo" id="moreinfo"></textarea>
+
+            <input id="submitservices" type="submit" value="Send"/>
+        </form>
+    </div>
+</div>

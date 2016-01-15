@@ -1,0 +1,12 @@
+﻿<div data-role="page" id="update" data-theme="a" >    <div data-role="header" style="text-align: center;">
+        <a href="/Maintenanz/Index" data-role="button" data-icon="home" data-inline="true" data-mini="true">Home</a>
+        <img src="~/Images/bus_276x71.png" />
+        <a href="javascript:document.getElementById('logoutForm').submit()" data-role="button" data-icon="back" data-inline="true" data-mini="true">Logout</a>
+        @using (Html.BeginForm("LogOff", "Maintenanz", FormMethod.Post, new { id = "logoutForm" })) {@Html.AntiForgeryToken()}
+    </div>    <div data-role="content" >
+            <h4>Updated</h4>
+            <p>
+The selected location and service was updated.
+            </p>
+    </div>
+</div>

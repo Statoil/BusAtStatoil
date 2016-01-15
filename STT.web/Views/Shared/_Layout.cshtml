@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>bus@Statoil - @ViewBag.Title</title>
+
+        <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' />
+
+        <!-- http://www.elevatedgis.com/blog/2012/09/21/ios-6-geolocation-and-local-data-storage/ -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+        <meta name='HandheldFriendly'  content='True' />
+        <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+                
+        @*Icon*@
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="~/Images/favicon.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/Images/nfavicon57x57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Images/nfavicon72x72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Images/nfavicon114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" href="~/Images/nfavicon114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" href="~/Images/nfavicon.png"/>
+        <link rel="icon" href="~/Images/favicon.png" type="image/png" />
+
+        @*CSS*@
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="~/themes/statoiltransportapp.min.css" />
+
+        @*Scripts*@
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+        @Scripts.Render("~/bundles/modernizr")        
+        @Scripts.Render("~/bundles/statoiltransport")
+    </head>
+    <body>
+        <style>
+            .xxxui-page { background: #f2f2f2;}
+            .xxxui-header { background: #f2f2f2;}
+            .xxxui-btn-text { background: #aaaaaa;}
+            .xxxui-btn-inner { background: #aaaaaa;}
+            .xxxui-li { background: #aaaaaa;}
+            .xxxui-corner-top { background: #aaaaaa;}
+            .xxxui-content { color: #555555;}
+        </style>
+        @RenderBody()
+        
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

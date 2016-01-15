@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Geo tests";
+}
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<div data-role="page" id="geotests" data-theme="a" >        <div data-role="navbar" >            <ul>                <li>@Html.ActionLink("Geo tests", "Geotests", "Tests", new {}, new {@class = "ui-btn-active"})</li>            </ul>        </div>
+
+<div data-role="content" >
+        <div data-role="field contain">                                  <div class="xxxui-block-b" data-content-theme="b"  id="geoloc">                    <h4>GeoLocation</h4>                        Address: <span id="geolocaddress">currently unknown...</span>.
+                        <br />
+                        Accuracy: <span id="geolocaccuracy">currently unknown...</span>.
+                        <br />
+                        Coordinates: <span id="geoloccoords">currently unknown...</span>.                </div>
+                <div class="xxxui-block-b" data-content-theme="b"  id="iploc">                    <h4>IPLocation</h4>                        Address: <span id="iplocaddress">currently unknown...</span>.
+                        <br />
+                        Accuracy: <span id="iplocaccuracy">currently unknown...</span>.
+                        <br />
+                        Coordinates: <span id="iploccoords">currently unknown...</span>.                </div>
+                <div class="xxxui-block-b" data-content-theme="b"  id="locmap">                    <h4>Locations</h4>                <div id="geomapcanvas"> </div>
+                    </div>
+        </div>
+    </div>
+    @Html.Partial("_Footer")
+</div>

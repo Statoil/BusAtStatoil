@@ -1,0 +1,34 @@
+﻿@model STT.web.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+<div data-role="page" id="login" data-theme="a" >
+    <div data-role="header" style="text-align: center;">
+        <img src="~/Images/bus_276x71.png" />
+        <h1>Log in</h1>
+    </div><div data-role="content" >
+<section id="loginForm">
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+        <input type="submit" value="Log in" />
+
+        <!-- Remember do disable controller as well p> 
+        @Html.ActionLink("Register", "Register") if you don't have an account.
+    </p -->
+}
+</section>
+    </div>
+</div>

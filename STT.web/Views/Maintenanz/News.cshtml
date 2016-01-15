@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Maintenance";
+}
+<div data-role="page" id="maintainnews" data-theme="a" >
+    <div data-role="header" style="text-align: center;">
+        <a href="/Maintenanz/Index" data-role="button" data-icon="home" data-inline="true" data-mini="true">Home</a>
+        <img src="~/Images/bus_276x71.png" />
+        <a href="javascript:document.getElementById('logoutForm').submit()" data-role="button" data-icon="back" data-inline="true" data-mini="true">Logout</a>
+        @using (Html.BeginForm("LogOff", "Maintenanz", FormMethod.Post, new { id = "logoutForm" })) {@Html.AntiForgeryToken()}
+        <h1>News and about</h1>
+    </div>
+
+    <div data-role="content" >
+        <b>@ViewBag.Message</b><br />
+        <form action="/Maintenanz/UpdateNews" method="post" >
+            <label for="kind" class="select">Service:</label>
+            <select name="newskind" id="newskind">
+            <option value="News">News</option>
+            <option value="AboutUpdates">About - updates</option>
+            <option value="AboutResponsible">About - responsible</option>
+            </select>   
+            	
+            <label for="info">Information:</label>
+            <textarea name="newsinfo" id="newsinfo"></textarea>
+
+            <input id="submitnews" type="submit" value="Send"/>
+        </form>
+    </div>
+</div>

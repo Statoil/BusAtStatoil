@@ -1,0 +1,16 @@
+﻿<div data-role="page" id="jsontests" data-theme="a" >        <div data-role="navbar" >            <ul>                <li>@Html.ActionLink("Geo tests", "Geotests", "Tests")</li>            </ul>        </div>
+
+<div data-role="content" >
+                <script>
+                    //$.getJSON('http://statoiltransport.cloudapp.net/Home/GetTransportInformation?city=Stavanger&kind=Office&callback=?', function (data) {
+                      $.getJSON('http://localhost:51408/Home/GetTransportInformation?city=Bergen&kind=Airport', function (data) {
+                        console.warn(data);
+                        $.each(data, function (val, text) {
+                            alert('inside' + text['Information']);
+                        })
+                            
+                    //document.querySelector('#OfficeMoreInfo').innerHTML = d.Moreinformation;
+                    });
+            </script>
+    </div>
+</div>
