@@ -75,7 +75,7 @@ namespace STT.web.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Attempt to register the user
+                 Attempt to register the user
                 try
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
@@ -88,7 +88,7 @@ namespace STT.web.Controllers
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+             If we got this far, something failed, redisplay form
             return View(model);
         }*/
 

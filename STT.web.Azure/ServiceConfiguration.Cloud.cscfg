@@ -3,7 +3,6 @@
   <Role name="STT.web">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tetess;AccountKey=P4GTp5BdqNRDcYfx9el+LUxu+A3rw43LdwsISsIISlCI1JBzOhdHVJIeSGm6et+lhiW6cdw5+nA0JjGZqfZocA==" />
     </ConfigurationSettings>
     <Certificates></Certificates>
   </Role>

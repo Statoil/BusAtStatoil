@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Ninject;
-using Ninject.Web.Mvc;
+using Ninject.Web.Common;
 using STT.core.Interfaces;
 using STT.core.Interfaces.Services;
 using STT.data.Repository;
