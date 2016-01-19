@@ -4,6 +4,8 @@
     <Instances count="1" />
     <ConfigurationSettings>
     </ConfigurationSettings>
-    <Certificates></Certificates>
+    <Certificates>
+      <Certificate name="Azure Certificate" thumbprint="DDAA2AAE3E6E082EF190072117D5E3BF2E206CB0" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
