@@ -50,6 +50,7 @@ namespace STT.web.Controllers
 
         public ActionResult BusLocation(string location)
         {
+            ViewBag.Title = location;
             ViewBag.Message = location+" area";
             ViewBag.Location= location;
             if(_transportService.GetTransportInformation(location, Transport.TRANSPORT_KIND_OFFICE_SHUTTLE).Count > 0)
@@ -66,9 +67,12 @@ namespace STT.web.Controllers
                 ViewBag.AirportMore = _transportService.GetTransportInformation(location, Transport.TRANSPORT_KIND_AIRPORT_SHUTTLE).FirstOrDefault().Moreinformation;
             return View();
         }
+      
 
         public ActionResult News()
         {
+            ViewBag.Title = "News";
+
             ViewBag.Message = "News";
             if (_articleService.GetArticle(Article.ARTICLE_KIND_NEWS).Count > 0)
                 ViewBag.News = _articleService.GetArticle(Article.ARTICLE_KIND_NEWS).FirstOrDefault().Information;
@@ -77,6 +81,8 @@ namespace STT.web.Controllers
         }
         public ActionResult About()
         {
+            ViewBag.Title = "About";
+
             ViewBag.Message = "About";
             if (_articleService.GetArticle(Article.ARTICLE_KIND_ABOUTUPDATES).Count > 0)
                 ViewBag.AboutUpdates = _articleService.GetArticle(Article.ARTICLE_KIND_ABOUTUPDATES).FirstOrDefault().Information;

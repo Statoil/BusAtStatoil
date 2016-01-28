@@ -8,7 +8,8 @@
         <a href="javascript:document.getElementById('logoutForm').submit()" data-role="button" data-icon="back" data-inline="true" data-mini="true">Logout</a>
         @using (Html.BeginForm("LogOff", "Maintenanz", FormMethod.Post, new { id = "logoutForm" })) {@Html.AntiForgeryToken()}
         <h1>Maintenance (@User.Identity.Name)</h1>
-    </div>    <div data-role="content" >
+    </div>
+    <div data-role="content" >
         The URL to this page is intentionally made obfuscated.
         <hr />
         <ul data-role="listview" data-inset="true">
